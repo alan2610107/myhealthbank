@@ -1,0 +1,22 @@
+html, body {
+
+-ms-overflow-style: scrollbar
+}
+.fmenu { right: 0; top: 50%; padding: 0; margin: 0; position: fixed; z-index: 10;}
+.fmenu>li { display: table; margin-bottom: 1px; float: right; clear: both; -webkit-transition: all .5s; transition: all .5s; -webkit-transition-delay: 2s; transition-delay: 2s; }
+.fmenu>li.fmenu-item1 { background-color: #20B159; }
+.fmenu>li.fmenu-item2 { background-color: #0066B3; }
+.fmenu>li.fmenu-item3 { background-color: #CCCC00; }
+.fmenu>li.fmenu-item4 { background-color: #2BA0E4; }
+.fmenu>li.fmenu-item5 { background-color: #FF9900; }
+.fmenu>li.fmenu-item6 { background-color: #6666FF; }
+.fmenu>li { -webkit-transition: all .5s; transition: all .5s; }
+.fmenu>li:hover { margin-right: 0!important; }
+.fmenu>li>a { text-decoration: none; display: table-row; cursor: pointer; color: #fff; }
+.fmenu>li>a>span { display:table-cell; vertical-align: middle; height: 50px; white-space: nowrap; text-shadow: 0 1px 0 rgba(0,0,0,.05); }
+.fmenu .fmenu-icon { width: 60px; text-align: center; font-size: 16px; }
+.fmenu .fmenu-txt { font-weight: 500; font-size: 20px; padding: 0 25px 0 5px; text-align: left; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .fmenu { right: 0px; }
+}

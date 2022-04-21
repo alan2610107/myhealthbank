@@ -1,0 +1,139 @@
+/*@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body { font-family: 'Noto Sans TC', sans-serif; }
+*/
+
+.nav>div { margin-bottom: 15px; }
+
+
+nav.menu { max-width: 800px; }
+.flexnav, .flexnav ul { padding: 0; margin: 0; list-style: none; font-size: 16px; }
+
+/* Flexnav Base Styles */
+.flexnav { overflow: hidden; margin: 0 auto; width: 100%; max-height: 0;
+    -webkit-transition: none; -moz-transition: none; -ms-transition: none; transition: none; -webkit-transform-style: preserve-3d;
+}
+.flexnav.opacity { opacity: 0; }
+.flexnav .flexnav-show { max-height: 2000px; opacity: 1; display: block!important;
+    -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; transition: all .5s ease-in-out;
+}
+.flexnav li ul { display: none!important; }
+.flexnav li { position: relative; overflow: hidden; border-bottom: 1px solid #ccc; }
+.flexnav li a { position: relative; z-index: 2; display: block; overflow: hidden; color: #555; line-height: 50px; text-decoration: none; background-color: #fff;
+ padding-left: 1em; padding-right: .5em; }
+.flexnav li ul li { position: relative; overflow: hidden; border-top: 1px solid #ccc; border-bottom: none; }
+.flexnav li ul li a { display: block; font-size: 15px; padding-right: 36px; position: relative; }
+.flexnav ul li.item-with-ul>ul, .flexnav li:hover ul li a { background-color: #fff!important; }
+.flexnav li ul.flexnav-show li { overflow: visible; }
+.flexnav li ul.flexnav-show>li>a { color: #395e8c; background-color: #fff; }
+
+.flexnav ul li ul li a:before { content: '-'; display: inline-block; margin-right: .5em;}
+.flexnav ul li ul li a { background: #2ba0e4; padding-left: 1.5em; }
+.flexnav ul li ul li ul li a { background: #2ba0e4; }
+.flexnav .touch-button { position: absolute; z-index: 999; top: 0; right: 0; width: 36px; height: 36px; display: inline-block; text-align: center; padding-left: 5px; }
+.flexnav .touch-button:after { content: "\25BE"; line-height: 50px; text-align: center; }
+.flexnav li li .touch-button:after { color: #fff!important; }
+.flexnav .touch-button>i { display: none; }
+.flexnav .touch-button:hover { cursor: pointer; }
+.flexnav .touch-button .navicon { position: relative; top: 1.4em; font-size: 12px; color: #666; }
+
+
+.menu-button { position: relative; display: block; padding: .6em 1em; background: #2ba0e4; color: #fff; cursor: pointer; border-bottom: 1px solid #038cdc; }
+.menu-button .touch-button { background: transparent; position: absolute; z-index: 999; top: 0; right: 0; width: 36px; height: 36px; display: inline-block; text-align: center; }
+.menu-button .touch-button:after { content: "\25BE"; line-height: 36px; text-align: center; }
+.menu-button .touch-button .navicon { display: none; }
+
+@media all and (min-width: 768px) {
+    .nav>div { width: 660px; padding-top: 10px; float: right; position: relative; z-index: 999; }
+    .flexnav { overflow: visible; }
+    .flexnav.opacity { opacity: 1; }
+    .flexnav li { border-bottom: none; position: relative; list-style: none; float: left; display: block; overflow: visible; white-space: nowrap; width: 128px; }
+	.flexnav li:before, .flexnav li:after { content: ''; z-index: 100; position: absolute; left: 0; top: 2px; bottom: 2px; width: 1px; background-color: #ccc; display: block; }
+    .flexnav li:after { top: 8px; left: 1px; width: 2px; opacity: .5; }
+    .flexnav li li:before, .flexnav li li:after { display: none; }
+    .flexnav li a { display: block; padding-left: .8em; padding-right: .5em; }
+    .flexnav li > ul { position: absolute; top: auto; left: 0; min-width: 100%; background-color: transparent; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+    .flexnav li > ul li { margin-right: 0; width: 100%; float: none; }
+    .flexnav li ul li > ul { margin-left: 100%; top: 0; }
+    .flexnav li ul li { border: 1px solid #ccc; border-bottom: none; }
+    .flexnav li ul li a { border-bottom: none; text-align: left; }
+    .flexnav ul li ul li a { padding-left: .5em; }
+    .flexnav li ul.open { display: block; opacity: 1; visibility: visible; z-index: 1; }
+    .flexnav li ul.open li { overflow: visible; max-height: 100px; }
+    .flexnav li ul.open ul.open { margin-left: 100%; top: 0; }
+    .menu-button { display: none; }
+    .flexnav li ul li:last-child { border-bottom: 1px solid #ccc; }
+    
+    .flexnav li:hover .touch-button:after { color: #fff; background-color: #2ba0e4; }
+    .navli:hover a{ color: #fff; background-color: #2ba0e4; }
+    .MenuBarlink:hover { color: #fff; background-color: #2ba0e4; }
+    .flexnav li:hover ul li .touch-button:after { background-color: transparent; color: #395e8c!important; }
+    .flexnav li:hover ul li:hover .touch-button:after { color: #fff!important; }
+    .flexnav ul li.item-with-ul:hover>a, .flexnav ul.flexnav-show li a:hover { color: #fff!important; background-color: #0070c0!important; }
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1000px) {
+    .nav>div { width: 530px; }
+    .flexnav .touch-button { opacity: 0; }
+}
+
+
+.oldie body.one-page {
+  padding-top: 70px; }
+.oldie .flexnav {
+  overflow: visible; }
+  .oldie .flexnav.one-page {
+    top: 0;
+    right: auto;
+    max-width: 1080px; }
+  .oldie .flexnav li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    background-color: #a6a6a2;
+    width: 20%;
+    min-height: 50px;
+    overflow: visible; }
+  .oldie .flexnav li:hover > ul {
+    display: block;
+    width: 100%;
+    overflow: visible; }
+    .oldie .flexnav li:hover > ul li {
+      width: 100%;
+      float: none; }
+  .oldie .flexnav li a {
+    border-left: 1px solid #acaca1;
+    border-bottom: none;
+    overflow: visible; }
+  .oldie .flexnav li > ul {
+    background: #acaca1;
+    position: absolute;
+    top: auto;
+    left: 0;
+    display: none;
+    z-index: 1;
+    overflow: visible; }
+  .oldie .flexnav li ul li ul {
+    top: 0; }
+  .oldie .flexnav li ul li a {
+    border-bottom: none; }
+  .oldie .flexnav li ul.open {
+    display: block;
+    width: 100%;
+    overflow: visible; }
+    .oldie .flexnav li ul.open li {
+      width: 100%; }
+    .oldie .flexnav li ul.open ul.open {
+      margin-left: 100%;
+      top: 0;
+      display: block;
+      width: 100%;
+      overflow: visible; }
+  .oldie .flexnav ul li:hover ul {
+    margin-left: 100%;
+    top: 0; }
+.oldie .menu-button {
+  display: none; }
+.oldie.ie7 .flexnav li {
+  width: 19.9%; }

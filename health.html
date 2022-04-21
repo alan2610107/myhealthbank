@@ -1,0 +1,760 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class=""><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>
+    全民健康保險-健康存摺
+</title>
+
+    <script type="text/javascript" src="/script/jquery-3.min.js"></script>
+
+    <link href="/style/normalize.css" rel="stylesheet"><link href="/style/pure-min.css" rel="stylesheet">
+    <!--[if lte IE 8]>
+    <link href="/style/grids-responsive-old-ie-min.css" rel="stylesheet" />
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link href="/style/grids-responsive-min.css" rel="stylesheet">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style/reset.css">
+    <link rel="stylesheet" type="text/css" href="/style/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1000px)" href="/style/tablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 770px)" href="/style/mobile.css">
+    <link rel="stylesheet" type="text/css" href="/style/SpryMenuBarHorizontal.css">
+    <script type="text/javascript" src="/script/SpryMenuBar.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/style/jquery-ui.css">
+    <script type="text/javascript" src="/script/jquery.js"></script>
+    <script type="text/javascript" src="/script/jquery-ui.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/jquery.fancybox.css"><link rel="stylesheet" type="text/css" media="screen" href="/IHKE0002/fancybox/jquery.fancybox-buttons.css"><link rel="stylesheet" type="text/css" media="screen" href="/IHKE0002/fancybox/jquery.fancybox-thumbs.css">
+    <script type="text/javascript" src="/script/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/script/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/script/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="/script/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/script/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <script type="text/javascript" src="/script/NHI.Web.Checker.js"></script>
+    <script type="text/javascript" src="/script/NHI.Web.Transform.js"></script>
+    <script type="text/javascript" src="/script/NHI.WEB.UC.js"></script>
+    <script type="text/javascript" src="/script/ihkeQuest.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style/nhi.css">
+    <script src="/script/sortable.min.js"></script>
+    <link href="/style/sortable-theme-minimal.css" rel="stylesheet">
+    <script>
+
+        function filterTable(keyword) {
+
+            if (keyword.length != 0) {
+                keyword = '(' + keyword + ')' + '[0-9]{3}' + '[a-zA-Z]{1}';
+            }
+
+            var rex = new RegExp(keyword, 'i');
+            $('.searchable tr').hide();
+            $('.searchable tr').filter(function () {
+                return rex.test($(this).text());
+            }).show();
+        }
+    </script>
+
+    <style type="text/css">
+        .fontsize01
+        {
+            font-size: 80%;
+        }
+
+        .fontsize02
+        {
+            font-size: 90%;
+        }
+
+        .fontsize03
+        {
+            font-size: 100%;
+        }
+
+        .fontsize04
+        {
+            font-size: 110%;
+        }
+
+        .fontsize05
+        {
+            font-size: 120%;
+        }
+        .headuser
+        {
+            border: 1px solid white;
+            color: white;
+            vertical-align: middle;
+        }
+        .headuser:hover
+        {
+            border: 1px solid white;
+            color: white;
+            vertical-align: middle;
+        }
+    </style>
+    <!-- stan //-->
+    <link rel="stylesheet" type="text/css" href="/style/flexnav.css"><link rel="stylesheet" type="text/css" href="/style/fmenu.css">
+    <script src="/script/menu.js"></script>
+    <!-- END //-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="/style/fmenu_ie8-fix.css" />
+    <![endif]-->
+    <style type="text/css">.fancybox-margin{margin-right:0px;}</style><style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+<body>
+<form method="post" action="./ihke2004s01.aspx" id="form1" class="fontsize03">
+    <div class="aspNetHidden">
+        <input type="hidden" name="sm1_HiddenField" id="sm1_HiddenField" value="">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+        <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+
+
+    <script src="/WebResource.axd?d=dRawx84WBj9tg04F3xitPzUxMZ3GvD9YRSR9Xc6pLyvQhggXKWl0uK1HbkFBdS66J9-RkaiHfCg9nVsZopS4-ZVm2741&amp;t=637751082580544600" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var __cultureInfo = {"name":"zh-TW","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"NT$","NaNSymbol":"非數值","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"上午","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402271999999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"yyyy\u0027年\u0027M\u0027月\u0027d\u0027日\u0027 tt hh:mm:ss","LongDatePattern":"yyyy\u0027年\u0027M\u0027月\u0027d\u0027日\u0027","LongTimePattern":"tt hh:mm:ss","MonthDayPattern":"M月d日","PMDesignator":"下午","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"yyyy/M/d","ShortTimePattern":"tt hh:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"yyyy\u0027年\u0027M\u0027月\u0027","AbbreviatedDayNames":["週日","週一","週二","週三","週四","週五","週六"],"ShortestDayNames":["日","一","二","三","四","五","六"],"DayNames":["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],"AbbreviatedMonthNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"MonthNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"IsReadOnly":true,"NativeCalendarName":"西曆 (中文)","AbbreviatedMonthGenitiveNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"MonthGenitiveNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""]},"eras":[1,"西元",null,0]};//]]>
+    </script>
+
+    <script src="/ScriptResource.axd?d=IPHaXT_A4HtN-ymawcQj2urUmRDfuYUBCH5Gr8Slv9V-YX8qqpRqhtRr7mmUdrIuRVeMV4U5izI98jYJ9DzXZUX0V_IwaapstZEwsSc1IewaaVPk0&amp;t=734d43f5" type="text/javascript"></script>
+    <script src="/ScriptResource.axd?d=sTj6EQx48-bD5wv6yPUyQImLRvSKyLuJCM02bEtEjhE_7NvUO9kjTsFNw13Um6sME5KoA8abj1qiRrytTm4Wf2EAhVoMI2WrvRHY4a4VPRt-S_dtvxWuDxhaPlVf6Q0BKAP59A2&amp;t=734d43f5" type="text/javascript"></script>
+    <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FEAD1EC4">
+        <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="uoE9+LPbDpcZCPvWTe6tknjXI7NT1kDuMktVlIA1YE5VWilW4LnLiisMPWq23rvdFz/H4PPa0dEQvA+rQUiu73yV/j43VB0nPFiGT7ZPjKrHiIcdpwJSQY7EO/Zq8UdP81mQq5hjBDUlRvJ3PKp/AQm9v0F1nh6lL/B+wZ6b8FehaYQlYZSyqIPWwAF5lyfnZCVeIfAfPM1/eKcjLjoJQ+l3EUMdx42Q+mE0oa+yk2dUDEBRTV6hPwtH3Wrt3LnmBlcZjjBinr0Fc2cenMsP64omBVi9waDgKvu2mLeh/PqczNMVvGkWoV0NXjoPmvJGiw0K13vVuTrpxRMZNoxfBfRVEGQ=">
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Sys.WebForms.PageRequestManager._initialize('ctl00$sm1', 'form1', [], ['ctl00$sm1','sm1'], [], 90, 'ctl00');
+        //]]>
+    </script>
+    <input type="hidden" name="ctl00$sm1" id="sm1">
+    <script type="text/javascript">
+        //<![CDATA[
+        Sys.Application.setServerId("sm1", "ctl00$sm1");
+        Sys.Application._enableHistoryInScriptManager();
+        //]]>
+    </script>
+
+    <input type="hidden" name="ctl00$hidSelectMenu" id="hidSelectMenu" value="健康資料">
+    <input type="hidden" name="ctl00$hidPrsnNo" id="hidPrsnNo">
+    <div class="wrapper">
+        <div class="header">
+            <div class="content">
+                <div class="left">
+                    歡迎 D12277****&nbsp;&nbsp;
+                    &nbsp;&nbsp;
+                    <a id="lborigin1" class="headuser" href="javascript:__doPostBack('ctl00$lborigin1','')">&nbsp;本人&nbsp;</a>
+                    <a href="/IHKE0002/IHKE1014S01.aspx" id="aChange" class="headuser">&nbsp;眷屬／非本人&nbsp;</a>
+                </div>
+                <div class="right">
+                    <ul class="quickLink">
+                        <li>字體大小 <a id="fontsmall" href="#"><i class="fa fa-minus-circle" style="color: White;"></i></a>&nbsp;<a id="fontbig" href="#"><i class="fa fa-plus-circle" style="color: White;"></i></a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/watch?v=Me_SUp1uV8U">健康存摺介紹短片</a></li>
+                        <li><a href="ihke0002s10.aspx#/#m-info">使用指南</a></li>
+                        <li><a href="ihke0002s12.aspx">常見問題</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav content">
+            <a class="logo left" href="/ihke0002/IHKE0002S04.aspx">
+                <img src="/image/logo.png" width="189" height="70" alt="全民健康保險健康存摺LOGO" title="全民健康保險健康存摺LOGO"></a>
+            <div style="width:800px; margin-top: -12px;">
+                <div class="menu-button"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> 選單<span class="touch-button"><i class="navicon">▼</i></span></div>
+                <nav class="menu">
+                    <ul data-breakpoint="800" class="flexnav with-js opacity lg-screen" style="padding-left: 150px;">
+
+                        <li class="navli item-with-ul"><a class="MenuBarItemSubitem" href="#"><i class="fa fa-user fa-lg" aria-hidden="true"></i> 個人專區</a>
+                            <ul style="display: none;">
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1003s01.aspx">我的行事曆</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1004s01.aspx">設定常用功能</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1007s01.aspx">眷屬管理-設定/查詢</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1016s01.aspx">資料提供紀錄</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1017s01.aspx">口罩購買紀錄</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1024s01.aspx">就醫總覽</a>
+                                </li>
+                            </ul>
+                            <span class="touch-button"><i class="navicon">▼</i></span></li>
+                        <li class="navli item-with-ul"><a class="MenuBarItemSubitem" href="#"><i class="fa fa-heartbeat fa-lg" aria-hidden="true"></i> 健康資料</a>
+                            <ul style="display: none;">
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1001s01.aspx">生理量測與貼心叮嚀</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2004s01.aspx">預防接種資料</a>
+                                </li>
+                                <li class="navli item-with-ul"><a class="MenuBarItemSubitem" href="#">就醫資料</a>
+                                    <ul style="display: none;">
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2001s01.aspx">西醫門診資料</a></li>
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2006s01.aspx">中醫門診資料</a></li>
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2002s01.aspx">牙醫門診資料</a></li>
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2005s01.aspx">住院資料</a></li>
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2009s01.aspx">用藥資料</a></li>
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2008s01.aspx">手術資料</a></li>
+                                    </ul>
+                                    <span class="touch-button"><i class="navicon">▼</i></span></li>
+                                <li class="navli item-with-ul"><a class="MenuBarItemSubitem" href="#">檢驗檢查結果</a>
+                                    <ul style="display: none;">
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2003s01.aspx">血糖、血脂檢驗資料</a></li>
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2012s01.aspx">其他檢驗資料</a></li>
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2013s01.aspx">影像或病理檢查資料</a></li>
+                                        <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2021s01.aspx">COVID-19 疫苗接種/病毒檢測結果</a></li>
+                                    </ul>
+                                    <span class="touch-button"><i class="navicon">▼</i></span></li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2014s01.aspx">健康金存摺</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2007s01.aspx">成人預防保健結果</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2015s01.aspx">癌症篩檢結果</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2016s01.aspx">自費健檢資料登錄</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2020s01.aspx">生理期紀錄</a>
+                                </li>
+                            </ul>
+                            <span class="touch-button"><i class="navicon">▼</i></span></li>
+                        <li class="navli item-with-ul"><a class="MenuBarItemSubitem" href="#"><i class="fa fa-plus-square fa-lg" aria-hidden="true"></i> 疾病評估</a>
+                            <ul style="display: none;">
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke4001s01.aspx">肝癌風險預測</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke4002s01.aspx">末期腎病評估</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke4003s01.aspx">糖尿病追蹤</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke4004s01.aspx">初期慢性腎病追蹤</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke4005s01.aspx">BC肝炎追蹤</a>
+                                </li>
+                            </ul>
+                            <span class="touch-button"><i class="navicon">▼</i></span></li>
+                        <li class="navli item-with-ul"><a class="MenuBarItemSubitem" href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i> 下載服務</a>
+                            <ul style="display: none;">
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke3001s01.aspx">Html格式檔案</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke3002s01.aspx">XML格式檔案</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke3004s01.aspx">JSON格式檔案</a>
+                                </li>
+                                <li class="navli"><a class="MenuBarItemSubitem" href="/ihke0002/ihke3005s01.aspx">影像格式檔案</a>
+                                </li>
+                            </ul>
+                            <span class="touch-button"><i class="navicon">▼</i></span></li>
+
+
+                        <li>
+                            <a id="lbtnLogout" class="MenuBarlink" href="javascript:__doPostBack('ctl00$lbtnLogout','')"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>系統登出</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div class="blockContainer content">
+            <div class="path">
+                <table border="0">
+                    <tbody><tr>
+                        <td>
+                            <i class="fa fa-th"></i>&nbsp;現在位置：<span style="text-decoration:underline;"><a href="/ihke0002/IHKE0002S04.aspx">我的首頁</a></span> &gt; 健康資料 &gt; 預防接種資料
+                            <a href="#" class="right fa fa-question-circle" style="display: none;"></a>
+
+                        </td>
+                        <td style="text-align: right;">
+                            <input type="image" id="btnPrice" src="images/price.gif" style="height: 31px; width: 156px; visibility:hidden;">
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </div>
+            <div class="main">
+
+                <div class="block">
+                    <div>
+                        <h1>預防接種資料 <a href="#" onclick="window.open('/ihke0002/UserControl/ShowLinkforB200.aspx?para=vac','_blank','width=800,height=400,top=250,left=400,resizable=yes,toolbar=no,location=no,directories=no,status=yrd,menubar=no,scrollbars=no');return false" class="fa fa-exclamation-circle" target="_blank" style="color: #2ba0e4"></a>
+                        </h1>
+                    </div>
+
+                    <div id="cph_divsort72">
+                        <label>排序項目：</label>
+                        <select name="ctl00$cph$ddlsort72" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cph$ddlsort72\',\'\')', 0)" id="ddlsort72">
+                            <option selected="selected" value="inoculate_d">接種日期</option>
+                            <option value="code_cname">疫苗中文名稱</option>
+                            <option value="HOSP_ABBR">醫事機構</option>
+
+                        </select>
+                        <a id="cph_btnDesc72" class="fa fa-chevron-circle-down fa-lg" href="javascript:__doPostBack('ctl00$cph$btnDesc72','')" style="color: #2BA0E4"></a>
+                        <a id="cph_btnAsc72" class="fa fa-chevron-circle-up fa-lg" href="javascript:__doPostBack('ctl00$cph$btnAsc72','')" style="color: grey"></a>
+                        <br>
+                        <br>
+                    </div>
+
+                    <table class="tableStyle01 pure-table pure-table-horizontal">
+                        <thead>
+                        <tr>
+                            <th>接種日期</th>
+                            <th>疫苗名稱</th>
+                            <th>醫事機構/施打地點</th>
+                            <th>資料來源</th>
+                        </tr>
+                        </thead>
+                        <tbody class="searchable">
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_0">111/02/10</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_0" style="display:inline-block;width:300px;">輝瑞/BNT COVID-19疫苗(批號1K071A)</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_0">林大傑耳鼻喉科診所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_0">疾病管制署</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_1">110/12/08</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_1" style="display:inline-block;width:300px;">輝瑞/BNT COVID-19疫苗(批號1I061A_1110101)</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_1">林大傑耳鼻喉科診所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_1">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_2">110/10/30</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_2" style="display:inline-block;width:300px;">輝瑞/BNT COVID-19疫苗(批號1H056A)</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_2">加恩耳鼻喉專科診所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_2">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_3">085/03/05</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_3" style="display:inline-block;width:300px;">日本腦炎疫苗(鼠腦製備)</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_3">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_3">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_4">084/07/13</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_4" style="display:inline-block;width:300px;">小兒麻痺口服疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_4">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_4">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_5">084/07/13</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_5" style="display:inline-block;width:300px;">白喉破傷風百日咳混合疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_5">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_5">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_6">084/05/22</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_6" style="display:inline-block;width:300px;">麻疹腮腺炎德國麻疹混合疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_6">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_6">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_6">084/03/23</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_6" style="display:inline-block;width:300px;">日本腦炎疫苗(鼠腦製備)</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_6">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_6">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_7">084/03/09</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_7" style="display:inline-block;width:300px;">日本腦炎疫苗(鼠腦製備)</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_7">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_7">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_8">083/09/12</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_8" style="display:inline-block;width:300px;">麻疹疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_8">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_8">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_9">083/07/27</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_9" style="display:inline-block;width:300px;">小兒麻痺口服疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_9">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_9">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_10">083/07/27</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_10" style="display:inline-block;width:300px;">白喉破傷風百日咳混合疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_10">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_10">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_11">083/06/27</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_11" style="display:inline-block;width:300px;">B型肝炎遺傳工程疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_11">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_11">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_12">083/05/09</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_12" style="display:inline-block;width:300px;">小兒麻痺口服疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_12">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_12">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_13">083/05/09</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_13" style="display:inline-block;width:300px;">白喉破傷風百日咳混合疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_13">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_13">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_14">083/02/28</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_14" style="display:inline-block;width:300px;">小兒麻痺口服疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_14">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_14">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_15">083/02/28</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_15" style="display:inline-block;width:300px;">白喉破傷風百日咳混合疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_15">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_15">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_16">083/01/27</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_16" style="display:inline-block;width:300px;">B型肝炎遺傳工程疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_16">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_16">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_17">082/12/27</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_17" style="display:inline-block;width:300px;">卡介苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_17">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_17">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span id="cph_lstV72_lblInoculateD_18">082/12/23</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblCodeCName_18" style="display:inline-block;width:300px;">B型肝炎遺傳工程疫苗</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblHospAbbr_18">臺南市南區衛生所</span>
+                            </td>
+                            <td>
+                                <span id="cph_lstV72_lblSource_18">疾病管制署</span>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+
+                    <br>
+                    <div>
+                        <h1>自行紀錄</h1>
+
+                        <div style="text-align: center;"><b>～無資料～</b></div><br>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <input type="submit" name="ctl00$cph$btnAdd" value="新增資料" id="cph_btnAdd" class="btn inline">
+                    </div>
+                    <div style="padding: 5px 5px 5px 0px;">
+                        註：
+                        <ol style="list-style-type: decimal; padding-left: 40px;">
+                            <li>針對本資料有疑義者，可電洽就近之衛生所/健康服務中心或各地方政府衛生局預防<a href="https://www.cdc.gov.tw/Category/List/TcKynGco9G59NR02tsMyaQ" target="_blank" class="underline">接種諮詢專線網頁</a>協助查詢確認。</li>
+                            <li>疾病管制署全國性預防接種資訊管理系統係於民國92年底完成建置，管理全國民眾之預防接種資料，因此民國92年以後出生個案之接種資料相對較完整。</li>
+                            <li>系統之接種資料來源為(1)醫療院所透過健保上傳或媒體匯入；(2)各地衛生所執行接種後逕行登錄。受限於院所資料匯入或傳遞之時間差(2週~1個月)，以及不同接種地與戶籍地間之轉介歸戶作業時間，本系統之接種資料非即時性資料，因此近期接種的資料可能尚未完整匯入，實際之接種紀錄仍應以個案留存之紙本接種紀錄(黃卡)為主。</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.nhi.gov.tw/cp.aspx?n=70B3136783E85BC5&amp;topn=0B69A546F5DF84DC">隱私權政策
+            </a> | <a href="https://www.nhi.gov.tw/cp.aspx?n=00C6E93736545BC0&amp;topn=0B69A546F5DF84DC">資訊安全政策
+        </a> | <a href="https://www.nhi.gov.tw/cp.aspx?n=100C901F5643A55E&amp;topn=0B69A546F5DF84DC">政府網站資料開放宣告</a>
+            <br>
+            【統計起日103/12/25】參訪累計
+            <span id="lblVisitorCount">0124268378人次</span>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        (function() {var fn = function() {$get("sm1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+    </script>
+</form>
+<ul class="fmenu" style="margin-top: -153px;">
+    <li class="navli fmenu-item1" style="margin-right: -110px;"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1024s01.aspx"><span class="fmenu-icon"><i class="fa fa-list-ol fa-2x" aria-hidden="true"></i></span><span class="fmenu-txt">就醫總覽</span></a></li>
+    <li class="navli fmenu-item2" style="margin-right: -130px;"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1003s01.aspx"><span class="fmenu-icon"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i></span><span class="fmenu-txt">我的行事曆</span></a></li>
+    <li class="navli fmenu-item3" style="margin-right: -210px;"><a class="MenuBarItemSubitem" href="/ihke0002/ihke1001s01.aspx"><span class="fmenu-icon"><i class="fa fa-bell fa-2x" aria-hidden="true"></i></span><span class="fmenu-txt">生理量測與貼心叮嚀</span></a></li>
+    <li class="navli fmenu-item4" style="margin-right: -150px;"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2001s01.aspx"><span class="fmenu-icon"><i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i></span><span class="fmenu-txt">西醫門診資料</span></a></li>
+    <li class="navli fmenu-item5" style="margin-right: -150px;"><a class="MenuBarItemSubitem" href="/ihke0002/ihke2002s01.aspx"><span class="fmenu-icon"><i class="fa fa-2x" aria-hidden="true"><img src="/image/iconTeethv.png" style="width: 32px;height: 32px;margin-top: 3px;"></i></span><span class="fmenu-txt">牙醫門診資料</span></a></li>
+    <li class="navli fmenu-item6" style="margin-right: -150px;"><a class="MenuBarItemSubitem" href="/ihke0002/ihke4001s01.aspx"><span class="fmenu-icon"><i class="fa fa-area-chart fa-2x" aria-hidden="true"></i></span><span class="fmenu-txt">肝癌風險預測</span></a></li>
+
+
+</ul>
+
+<script type="text/javascript">
+    // Hover states on the static widgets
+    $("#dialog-link, #icons li").hover(
+        function () {
+            $(this).addClass("ui-state-hover");
+        },
+        function () {
+            $(this).removeClass("ui-state-hover");
+        }
+    );
+
+    var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", { imgDown: "SpryAssets/SpryMenuBarDownHover.gif", imgRight: "SpryAssets/SpryMenuBarRightHover.gif" });
+    $(document).ready(function () {
+        setMenuItem();
+        $("#base").fadeIn('fast');
+        InitFontSize();
+        $("#fontsmall").click(function () { SetFontSize(-1); });
+        $("#fontbig").click(function () { SetFontSize(1); });
+
+        $("#btnPrice").click(function () {
+            //alert('本署於106/09/11(一)~106/09/24(日)委託元培醫事科技大學\n辦理「健康存摺使用問卷調查」，歡迎填寫問卷。\n點選「確認」連結至問卷平台\n\n問卷諮詢電話：03-538-1183 分機8411 \n聯絡人：元培醫事科技大學 醫務管理系 徐均宏先生/陳鈺潔小姐');
+            //NewFile($('#hidPrsnNo').val());
+            return false;
+        });
+        $('.MenuBarItemSubitem').click(function () {
+            ajaxPost('ClickMenu', "{'Url':'" + $(this).attr("href") + "'}", '/IHKE0002/UserControl/UCAjax.aspx');
+        });
+    });
+
+    function InitFontSize() {
+        var FontSize = readCookie('fontsize') || 3;
+        $("#form1").addClass("fontsize0" + FontSize);
+        createCookie('fontsize', FontSize, 365);
+    }
+
+    function SetFontSize(Size) {
+        var FontSize = readCookie('fontsize') || 3;
+        var NewFontSize = parseInt(FontSize, 10) + parseInt(Size, 10);
+        if (NewFontSize > 5) { alert("已達最大字型！"); return; }
+        if (NewFontSize < 1) { alert("已達最小字型！"); return; }
+        $("#form1").removeClass("fontsize0" + FontSize).addClass("fontsize0" + NewFontSize);
+        createCookie('fontsize', NewFontSize, 365);
+    }
+
+    function createCookie(name, value, days) {
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires=" + date.toGMTString();
+        }
+        else var expires = "";
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function setMenuItem() {
+        var SelectMenu = $('#hidSelectMenu').val();
+        if (SelectMenu == '') return;
+        var MenuBarItem = $(".MenuBarItemSubmenu:contains(" + SelectMenu + ")");
+        MenuBarItem.css({
+            "background-color": "#2BA0E4",
+            "color": "white"
+        });
+        MenuBarItem.find("i").css({
+            "color": "white"
+        });
+    }
+
+
+</script>
+
+
+
+
+</body></html>

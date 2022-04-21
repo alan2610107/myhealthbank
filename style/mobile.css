@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.logo {
+	float: none;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#MenuBar1 {
+	margin: 0px;width: 100%;
+}
+#MenuBar1 li {
+	font-size: 100%;
+}
+#MenuBar1 li .fa {
+	text-align: center;
+	width: 100%;
+}
+.banner {
+	height: 200px;
+}
+.w5 {
+	width: 100%;
+}
+.w45 {
+	width: 100%;
+}
+.header {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.main .right.w45,.main .right.w4 {
+	width: 100%;
+}.L1 li, .L2 li, .L3 li, .L4 li, .L5 li, .L6 li, .L7 li, .L8 li, .L9 li, .L10 li {
+	width: 100%;	
+}

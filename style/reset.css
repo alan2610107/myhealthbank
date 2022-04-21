@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-size: 100%;
+	font-family: Verdana, Geneva, sans-serif, 敺株��迤暺煾��;
+	line-height: 1.5em;
+	margin: 0px;
+	padding: 0px;
+}
+html, body, .wrapper {
+	min-height: 100%;
+	weight: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	font-weight: normal;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+.both {
+	clear: both;
+}
+.center {
+	text-align: center;
+}
+.L1 li, .L2 li, .L3 li, .L4 li, .L5 li, .L6 li, .L7 li, .L8 li, .L9 li, .L10 li {
+	float: left;
+	padding: 10px;
+}
+.L1 li, .L1 td, .L1 th {
+	width: 100%;
+}
+.L2 li, .L2 td, .L2 th {
+	width: 50%;
+}
+.L3 li, .L3 td, .L3 th {
+	width: 33%;
+}
+.L4 li, .L4 td, .L4 th {
+	width: 25%;
+}
+.L5 li, .L5 td, .L5 th {
+	width: 20%;
+}
+.L6 li, .L6 td, .L6 th {
+	width: 16.66%;
+}
+.L7 li, .L7 td, .L7 th {
+	width: 14.2%;
+}
+.L8 li, .L8 td, .L8 th {
+	width: 12.5%;
+}
+.L9 li, .L9 td, .L9 th {
+	width: 11.11%;
+}
+.L10 li, .L10 td, .L10 th {
+	width: 10%;
+}
+.w1 {
+	width: 10%;
+}
+.w2 {
+	width: 20%;
+}
+.w3 {
+	width: 30%;
+}
+.w4 {
+	width: 40%;
+}
+.w5 {
+	width: 50%;
+}
+.w6 {
+	width: 60%;
+}
+.w7 {
+	width: 70%;
+}
+.w8 {
+	width: 80%;
+}
+.w9 {
+	width: 90%;
+}
+.w10 {
+	width: 100%;
+}
+.w15 {
+	width: 15%;
+}
+.w25 {
+	width: 25%;
+}
+.w35 {
+	width: 35%;
+}
+.w45 {
+	width: 45%;
+}
+.w55 {
+	width: 55%;
+}
+.w65 {
+	width: 65%;
+}
+.w75 {
+	width: 75%;
+}
+.w85 {
+	width: 85%;
+}
+.w95 {
+	width: 95%;
+}
+.page {
+	padding: 5px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+}
+.page ul li {
+	background-color: #FFF;
+	height: 5px;
+	width: 5px;
+	border-radius: 10px;
+	margin: 2px;
+	float: left;
+}
+.page ul {
+	margin: auto;
+	width: 100px;
+}
+.page ul .active {
+}
+input[type="text"] {
+	padding: 5px;
+	border: 1px solid #CCC;
+	border-radius: 2px;
+}
+img.left {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+img.right {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+img.center {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+th, td {
+	padding: 5px;
+}
+.padding {
+	padding: 20px;
+}

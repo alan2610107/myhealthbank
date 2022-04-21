@@ -1,0 +1,130 @@
+
+.num
+{
+    text-align: right;
+}
+.btn
+{
+    display: inline;
+}
+.listNews li:nth-child(odd)
+{
+    background-color: #fff;
+}
+.tableStyle01 tr:nth-child(odd)
+{
+    background-color: #fff;
+}
+.fancybox-skin
+{
+    /*border: 5px solid #026AB9;*/
+}
+.fancybox-title-float-wrap
+{
+    bottom: auto;
+    top: 10px;
+}
+.fancybox-title-float-wrap .child
+{
+    background: #2BA0E4;
+    font-size: 180%;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 30px;
+}
+.nonbtn
+{
+    border: 1px solid #052F4F;
+    border-radius: 5px; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2ba0e4+0,0068b7+100 */
+    background: rgb(43,160,228); /* Old browsers */ /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    color: #FFF;
+    text-align: left;
+    margin-right: 5px;
+    margin-left: 5px;
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.tableStyle02_new tr th {
+	text-align: right;
+	vertical-align: top;
+}
+.tableStyle02_new tr {
+	border-bottom-width: 1px;	
+	border-bottom-color: #ccc;
+}
+.tableStyle02_new tr:last-child {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	}
+
+/*th在左邊一排,如投保資料*/	
+.tableStyle01_new {
+	border: 2px solid #2A9EE1;
+	background-color: #FFF;
+	margin-bottom: 20px;
+}
+.tableStyle01_new tr td {
+	border: 1px solid #ccc;
+}
+.tableStyle01_new tr th {	
+	color: #FFF;
+	background-color: #2BA0E4;
+	text-align:right;
+	border: 1px solid #FFF;
+}
+
+/*排序的table使用,如牙科清單資料*/	
+.tableStyle01_seq {
+	border: 2px solid #2A9EE1;
+	background-color: #FFF;
+	margin-bottom: 20px;
+}
+.tableStyle01_seq tr td {
+	border: 1px solid #ccc;
+}
+.tableStyle01_seq tr th {
+	background-color: #ccc;
+	border: 1px solid #FFF;
+}
+.tableStyle01_seq tr:first-child th {
+	color: #FFF;
+	background-color: #2BA0E4;
+}
+
+.tableStyle01_seq a {
+	color: #0066cc;	
+	cursor:hand;
+}
+
+.tableStyle01_seq a:hover, a.active {
+	color: #2BA0E4;
+}
+
+.tableStyle01_seq a.underline {
+	text-decoration: underline;
+}
+
+.linkCursor{ cursor: pointer; }
+
+
+.DescNHI{
+   padding: 5px 5px 5px 0px;
+}
+
+.DescNHI ol{
+    list-style-type: decimal; 
+	padding-left: 40px;
+}
+
+.footer a {
+	color: white;	
+	cursor:hand;
+}
+
+
+
